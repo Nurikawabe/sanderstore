@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 //decorative
 import { GiAbstract037 } from "react-icons/gi";
-import { HiSearch, HiBell, HiChat, HiArrowNarrowRight } from "react-icons/hi";
+import { HiSearch, HiBell, HiChat, HiArrowNarrowRight, HiCake } from "react-icons/hi";
 
 //important
 import { useSession, signIn, signOut } from "next-auth/react"
@@ -44,8 +44,10 @@ function Header() {
         <button className='hover:bg-red-700 bg-black p-2 px-4 rounded-full' onClick={() => router.push('/')}>Home</button>
         <button className='font-semibold p-2 px-4 hover:bg-red-950 rounded-full' 
           onClick={()=>session? router.push('/pic-builder'): signIn()}>Create</button>
-        <div className='bg-transparent p-3
+        <div className='bg-transparent p-3 text-center
         gap-3 items-center rounded-full w-full hidden sm:flex'>
+          <HiCake className='text-[30px] text-red-800'/>
+          <h1 className='text[30px] text-red-800'>BBC Event - <a href="https://tsvetnihromozomi.files.wordpress.com/2017/01/26809-1pecahw.jpg?w=680" className='text-red-800 hover:text-red-700'>BirthdayBoy.com</a></h1>
         </div>
         <button onClick={() => router.push('/myBad')}>
           <HiBell className='text-[30px] text-red-800 hover:text-red-600'/>

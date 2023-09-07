@@ -56,18 +56,16 @@ function Form() {
             })
         })
     }
-
-   
    
   return (
     <div className='bg-crimson p-16 rounded-2xl '>
-        <div className='flex justify-end mb-6'>
+        <div className='flex justify-end'>
             <button onClick={()=>onSave()}
              className='bg-red-700 p-2
              hover:bg-red-500
              font-semibold px-3 
             rounded-lg'>
-              {loading?  <Image src="/loading-indicator.png" 
+              {loading?  <Image src="/LoadingIndicator.png" 
                 width={40} 
                 height={40} 
                 alt='aloing'
@@ -79,7 +77,7 @@ function Form() {
         {dumbass? <label className= " text-rose-500" for="imageGrid">No {file? "":"picture"}{title? "":(file?"":" and ") + "title"}, dumbass.</label>:null}<div id="imageGrid" className='grid grid-cols-1 lg:grid-cols-3 gap-10'>
             <UploadImage setFile={(file)=>setFile(file)} />
           
-       <div className="col-span-2">
+       <div className="col-span-1">
        <div className='w-[100%]'>
         <input type="text" placeholder='Title'
             onChange={(e)=>setTitle(e.target.value)}

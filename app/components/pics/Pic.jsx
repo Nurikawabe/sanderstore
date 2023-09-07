@@ -26,7 +26,7 @@ function picInfo({picInfo}) {
         before:h-full before:w-full
         before:rounded-3xl
         rounded-3xl
-        before:z-10
+        before:z-1
          hover:before:bg-[#000000bd]
         before:opacity-50
         cursor-pointer
@@ -40,9 +40,15 @@ function picInfo({picInfo}) {
         alt={picInfo.title}
         width={500}
         height={500}
-        className="rounded-3xl 
+        className="rounded-t-3xl 
         cursor-pointer z-0"
       />
+      <h2
+            className="font-sans text-ellipsis overflow-hidden hover:text-clip
+            text-[18px] mt-0 bg-[#ff03033d] text-white line-clamp-2 rounded-full text-center rounded-t-3xl"
+          >
+          {picInfo.title}
+      </h2>
     </div>
   );
 }

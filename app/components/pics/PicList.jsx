@@ -7,11 +7,14 @@ function PicList({pics}) {
     console.log(pics);
 
   return (
-    <div
+   <div
       className="mt-7 mb-4 px-2 md:px-5
+      aspect-video
       columns-2 md:columns-3
       lg:columns-4
-      xl:columns-5 space-y-7 mx-auto`"
+      xl:columns-5
+      space-y-7 mx-auto
+      break-inside"
     >
       {pics.map((item, index) => (
         <div key={index}>
@@ -22,4 +25,13 @@ function PicList({pics}) {
   );
 }
 
+<style>
+</style>
+   
+
 export default PicList
+/*
+  columns-2 md:columns-3
+      lg:columns-4
+      xl:columns-5
+*/
